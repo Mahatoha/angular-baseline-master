@@ -1,0 +1,11 @@
+:host {
+    background-color: #edf4f7;
+}
+
+::ng-deep .global-context-tooltip {
+    max-width: 400px;
+}
+
+::ng-deep .context {
+    width: 600px;
+}

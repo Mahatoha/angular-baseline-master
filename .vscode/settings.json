@@ -1,0 +1,31 @@
+{
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.lintTask.options": ". --ext .js,.ts",
+    "eslint.validate": [
+        "json",
+        "typescript",
+        "javascript"
+    ],
+    "js/ts.tsdk.path": "./node_modules/typescript/lib",
+    "js/ts.preferences.importModuleSpecifier": "project-relative",
+    "js/ts.preferences.importModuleSpecifierEnding": "minimal",
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    "prettier.useEditorConfig": false,
+    "angular.enable-strict-mode-prompt": false
+}

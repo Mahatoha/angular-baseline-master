@@ -1,0 +1,8 @@
+{
+    "name": "@gestion-acte/theme",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@openng/optimus-ui-themes": "^2.0.0"
+    },
+    "sideEffects": false
+}

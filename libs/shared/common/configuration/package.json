@@ -1,0 +1,9 @@
+{
+    "name": "@gestion-acte/configuration",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@angular/core": "^22.1.8",
+        "deepmerge-ts": "^7.1.5"
+    },
+    "sideEffects": false
+}

@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    img.authorization-logo {
+        height: 12.5rem;
+        width: auto;
+    }
+}

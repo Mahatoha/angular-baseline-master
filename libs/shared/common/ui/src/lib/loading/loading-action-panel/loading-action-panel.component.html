@@ -1,0 +1,17 @@
+@if (isActionRunning$ | async) {
+    <div class="loader-container" [class.fullscreen]="isFullScreenSnl()">
+        <ga-loader [size]="loaderSizeSnl()" />
+        @if (loadingTextSnl()) {
+            <div
+                class="loading-text"
+                [class.loading-text--sm]="loaderSizeSnl() === 'sm'"
+                [class.loading-text--md]="loaderSizeSnl() === 'md'"
+                [class.loading-text--lg]="loaderSizeSnl() === 'lg'"
+            >
+                {{ loadingTextSnl() }}
+            </div>
+        }
+    </div>
+} @else {
+    <div [@fadeIn] class="loaded-content"><ng-content /></div>
+}

@@ -1,0 +1,31 @@
+@if ({ config: avatarConfig$ | async }; as avatarConfiguration) {
+    @if ({ extras: $safeNavigationMigration(avatarConfiguration.config?.extraAvatars$) | async }; as extraAvatars) {
+        <div
+            gaHoverScale
+            gaHoverShadow
+            class="circle parent-circle {{ klassesSnl().join(' ') }} {{ sizeClassSnl() }}"
+            [class.no-actions]="!avatarConfiguration.config?.mainAvatarAction"
+            [style.background-color]="$safeNavigationMigration(avatarConfiguration.config?.backgroundColor)"
+            (click)="avatarConfiguration.config?.mainAvatarAction ? avatarConfiguration.config?.mainAvatarAction() : ''"
+        >
+            {{ nomSnl() | toInitiales: prenomSnl() }}
+        </div>
+        @if (!isSingleModeSnl()) {
+            @for (extra of extraAvatars.extras; track extra; let index = $index; let count = $count) {
+                <div
+                    [@slideAvatar]
+                    gaOverlapCircle
+                    [circleIndex]="index"
+                    class="circle child-circle {{ sizeClassSnl() }}"
+                    [class.call-to-action]="extra.action"
+                    [class.no-actions]="!extra.action"
+                    [style.color]="extra.color"
+                    [style.background-color]="extra.backgroundColor"
+                    (click)="extra.action ? extra.action() : ''"
+                >
+                    {{ extra.lastName | toInitiales: extra.firstName }}
+                </div>
+            }
+        }
+    }
+}

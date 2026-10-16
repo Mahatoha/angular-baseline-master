@@ -1,0 +1,197 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "cli": "nx",
+    "id": "open-api-client",
+    "title": "Generate sources from an OpenAPI specification file and an url in a library",
+    "type": "object",
+    "required": ["apiName", "baseUrl"],
+    "properties": {
+        "apiName": {
+            "type": "string",
+            "description": "name of the api and generated lib"
+        },
+        "baseUrl": {
+            "description": "url of the Api to fetch (only domains and port, not .json url).",
+            "type": "string"
+        },
+        "importPath": {
+            "type": "string",
+            "description": "The library name used to import it, like @myorg/my-awesome-lib.Will default to @apis/{ProjectName}"
+        },
+        "isRemoteSpec": {
+            "type": "boolean",
+            "description": "",
+            "alias": "r",
+            "x-prompt": "Is the API spec file published online?",
+            "default": true
+        },
+        "input": {
+            "description": "The input file or URL to the OpenAPI 3 specification, JSON or YAML, local file or URL",
+            "type": "string"
+        },
+        "output": {
+            "description": "Where generated files will be written to. Defaults to 'shared/apis/{ProjectName}'.",
+            "type": "string"
+        },
+        "fetchTimeout": {
+            "description": "Indicates the timeout when fetching the input URL, in milliseconds. Defaults to 20 seconds (20000).",
+            "type": "number",
+            "default": 20000
+        },
+        "defaultTag": {
+            "description": "Tag name assumed for operations without tags. Defaults to 'Api'.",
+            "type": "string"
+        },
+        "includeTags": {
+            "description": "When specified, filters the generated services, including only those corresponding to this list of tags.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "excludeTags": {
+            "description": "When specified, filters the generated services, excluding any service corresponding to this list of tags.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "ignoreUnusedModels": {
+            "description": "Indicates whether or not to ignore model files that are not referenced by any operation. Defaults to true.",
+            "type": "boolean",
+            "default": true
+        },
+        "removeStaleFiles": {
+            "description": "Indicates whether or not to remove any files in the output folder that were not generated. Defaults to true.",
+            "type": "boolean",
+            "default": true
+        },
+        "modelIndex": {
+            "description": "Typescript file, without '.ts' extension that exports all models. Set to false to skip. Defaults to `{ProjectName}ApiModels`.",
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "promises": {
+            "description": "Indicates if open api use promises instead of observable",
+            "type": "boolean",
+            "default": false
+        },
+        "services": {
+            "description": "Indicates if open api use services",
+            "type": "boolean",
+            "default": false
+        },
+        "serviceIndex": {
+            "description": "Typescript file, without '.ts' extension that exports all services. Set to false to skip. Defaults to `{ProjectName}ApiServices`.",
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "servicePrefix": {
+            "description": "Prefix for generated service classes. Defaults to empty.",
+            "type": "string",
+            "default": ""
+        },
+        "serviceSuffix": {
+            "description": "Suffix for generated service classes. Defaults to `Service`.",
+            "type": "string",
+            "default": "ApiService"
+        },
+        "modelPrefix": {
+            "description": "Prefix for generated model classes. Defaults to empty.",
+            "type": "string",
+            "default": ""
+        },
+        "modelSuffix": {
+            "description": "Suffix for generated model classes. Defaults to empty.",
+            "type": "string",
+            "default": ""
+        },
+        "configuration": {
+            "description": "Name for the configuration class to generate. Defaults to '{ProjectName}ApiConfiguration'.",
+            "type": "string"
+        },
+        "baseService": {
+            "description": "Name for the base service class to generate. Defaults to '{ProjectName}BaseService'.",
+            "type": "string"
+        },
+        "requestBuilder": {
+            "description": "Name for the request builder class to generate. Defaults to '{ProjectName}RequestBuilder'.",
+            "type": "string"
+        },
+        "response": {
+            "description": "Name for the response class to generate. Defaults to '{ProjectName}StrictHttpResponse'.",
+            "type": "string"
+        },
+        "module": {
+            "description": "Class name of the module that provides all services. Set to false to skip. Defaults to `{ProjectName}ApiModule`.",
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enumStyle": {
+            "description": "Determines how root enums will be generated. Possible values are:\n\n- `alias`: just generate a type alias with the possible values;\n- `upper` for an enum with UPPER_CASE names, and;\n- `pascal` for enum PascalCase names. Defaults to 'pascal'.",
+            "default": "pascal",
+            "enum": ["alias", "upper", "pascal"]
+        },
+        "templates": {
+            "description": "Custom templates directory. Any `.handlebars` files here will be used instead of the corresponding default.",
+            "type": "string"
+        },
+        "excludeParameters": {
+            "description": "When specified, ignores on generated services any parameters whose names are in this list.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "indexFile": {
+            "description": "When set to true, a index.ts file will be generated that exports all generated files.",
+            "default": true,
+            "type": "boolean"
+        },
+        "skipJsonSuffix": {
+            "description": "When specified, does not generate a $Json suffix.",
+            "default": false,
+            "type": "boolean"
+        },
+        "skipFormat": {
+            "description": "Skip formatting files.",
+            "type": "boolean",
+            "default": true
+        },
+        "customizedResponseType": {
+            "type": "object",
+            "description": "Defines which paths to use which responseType, commonly used when build-in deduction can't fullfill your needs",
+            "minProperties": 1,
+            "patternProperties": {
+                ".*": {
+                    "required": ["toUse"],
+                    "type": "object",
+                    "properties": {
+                        "toUse": {
+                            "type": "string",
+                            "enum": ["arraybuffer", "blob", "json", "document"]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

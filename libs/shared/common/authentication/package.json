@@ -1,0 +1,14 @@
+{
+    "name": "@gestion-acte/authentication",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@angular/common": "^22.1.8",
+        "@angular/core": "^22.1.8",
+        "@angular/router": "^22.1.8",
+        "angular-oauth2-oidc": "^20.0.2",
+        "rxjs": "~7.8.0",
+        "@gestion-acte/utils": "0.0.1",
+        "@datorama/akita": "^8.0.1"
+    },
+    "sideEffects": false
+}

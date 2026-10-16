@@ -1,0 +1,33 @@
+{
+    "name": "shared-common-rxjs-operators",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/shared/common/rxjs-operators/src",
+    "prefix": "ga",
+    "projectType": "library",
+    "tags": ["scope:common", "scope:shared", "type:utilities"],
+    "targets": {
+        "build": {
+            "executor": "@nx/angular:ng-packagr-lite",
+            "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "project": "libs/shared/common/rxjs-operators/ng-package.json",
+                "tsConfig": "libs/shared/common/rxjs-operators/tsconfig.lib.json"
+            },
+            "configurations": {
+                "production": {
+                    "tsConfig": "libs/shared/common/rxjs-operators/tsconfig.lib.prod.json"
+                },
+                "development": {}
+            }
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/shared/common/rxjs-operators/jest.config.ts",
+                "tsConfig": "libs/shared/common/rxjs-operators/tsconfig.spec.json"
+            }
+        }
+    }
+}

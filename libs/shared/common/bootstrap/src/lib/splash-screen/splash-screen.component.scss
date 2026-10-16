@@ -1,0 +1,40 @@
+// TODO: Both html and css of this component should be retrieved in root in case we need to use our splash screen directly in index.html
+// TODO: This is useful to show our splash screen before APP_INITIALIZER hook resolve.
+@use "sass:color";
+
+.splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+
+    .custom-spinner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: color.scale(#ffffff, $lightness: -10%);
+        border: 16px solid color.scale(#ffffff, $lightness: -10%);
+        border-top: 16px solid var(--yellow-500, yellow);
+        border-left: 16px solid var(--yellow-500, yellow);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: custom-spin 0.5s linear infinite;
+    }
+
+    @keyframes custom-spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+// var(--yellow-500, yellow);
+// flex flex-column justify-content-center align-items-center

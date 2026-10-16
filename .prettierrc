@@ -1,0 +1,41 @@
+{
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "auto",
+    "htmlWhitespaceSensitivity": "css",
+    "printWidth": 120,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "cssEnable": ["css", "less", "sass"],
+    "overrides": [
+        {
+            "files": ["*.spec.ts", "*.test.ts"],
+            "options": {
+                "printWidth": 120
+            }
+        },
+        {
+            "files": "*.yml",
+            "options": {
+                "tabWidth": 2
+            }
+        },
+        {
+            "files": ["*.xml", "web.config"],
+            "options": {
+                "printWidth": 120
+            }
+        },
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
+}

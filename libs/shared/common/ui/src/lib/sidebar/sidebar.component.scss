@@ -1,0 +1,129 @@
+img {
+    display: block;
+    &.opened {
+        height: 4.375rem;
+        margin: 1.875rem auto;
+        width: auto;
+    }
+}
+
+rs-logo-europe {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    height: 7rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1.875rem 0 0 0;
+}
+
+.close-btn {
+    margin-top: auto;
+    &:hover {
+        i {
+            margin-right: 0.9375rem;
+        }
+    }
+}
+
+li {
+    padding: 0rem 0 0rem 1.563rem;
+    display: flex;
+    height: 3.875rem;
+    align-items: center;
+
+    i {
+        font-size: 1rem;
+    }
+
+    span {
+        margin-left: 0.938rem;
+    }
+}
+
+:host {
+    background-color: var(--primary-color, blue);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    li {
+        color: var(--surface-section, white);
+        cursor: pointer;
+        border-left: solid var(--primary-color, blue) 0.25rem;
+    }
+
+    li:hover {
+        border-left: solid var(--primary-dark-color, darkblue) 0.25rem;
+    }
+
+    ul li.ng-star-inserted.is-active {
+        border-left: solid var(--primary-dark-color, darkblue) 0.25rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        div {
+            background-color: var(--yellow-500, yellow);
+        }
+    }
+}
+
+:host.sidebar-small {
+    width: 4.688rem;
+    min-width: 4.688rem;
+
+    img {
+        width: 3.063rem;
+        align-self: center;
+        height: auto;
+        margin-top: 1.875rem;
+    }
+
+    li {
+        padding: 0;
+        justify-content: center;
+    }
+
+    span.style1 {
+        display: none;
+    }
+
+    .close-btn {
+        justify-content: center;
+        i {
+            margin-right: 0;
+        }
+    }
+}
+
+.is-active {
+    background-color: var(--primary-dark-color, darkblue);
+}
+
+.close-btn {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary-color, white);
+    align-self: flex-end;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        i {
+            margin-left: 0.9375rem;
+        }
+    }
+}
+
+.close-label {
+    margin-left: 0.5rem;
+}
+
+.mobile-d-none {
+    @media only screen and (max-width: 768px) {
+        display: none !important;
+    }
+}

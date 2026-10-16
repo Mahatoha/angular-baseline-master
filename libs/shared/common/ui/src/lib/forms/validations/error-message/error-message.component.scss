@@ -1,0 +1,12 @@
+.gestion-acte-error-message {
+    color: var(--red-500, red);
+    position: absolute;
+    left: 2px;
+    max-width: max-content;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.gestion-acte-error-message-container {
+    position: relative;
+}

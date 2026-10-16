@@ -1,0 +1,13 @@
+{
+    "name": "@gestion-acte/authorization",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@angular/core": "^22.1.8",
+        "@gestion-acte/rxjs-operators": "0.0.1",
+        "rxjs": "~7.8.0",
+        "@angular/router": "^22.1.8",
+        "@gestion-acte/utils": "0.0.1",
+        "@datorama/akita": "^8.0.1"
+    },
+    "sideEffects": false
+}

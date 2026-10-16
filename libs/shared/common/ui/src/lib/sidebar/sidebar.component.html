@@ -1,0 +1,23 @@
+@if (openedSnl()) {
+<img src="assets/logos/logo-blanc-2x.png" alt="Col. St Barthélémy" class="mobile-d-none opened" />
+} @else {
+<img src="assets/logos/blason-2x.png" alt="Col. St Barthélémy" class="mobile-d-none" />
+}
+
+<ul>
+    @for (item of menuItemsSnl(); track item; let i = $index) { @if (item.visible !== false) {
+    <li
+        (click)="item.command !== undefined ? item.command({ item }) : navigateTo(item)"
+        [class.is-active]="item.routerLink | isSubstring : (activeRoute$ | async)"
+    >
+        <i [class]="item.icon"></i>
+        <span class="style1">{{ item.label }}</span>
+    </li>
+    } }
+</ul>
+<div class="mobile-d-none close-btn" (click)="toggleOpened()">
+    <i class="pi" [class]="toggleButtonClassSnl()"></i>
+    @if (openedSnl()) {
+    <span class="style2 close-label">réduire</span>
+    }
+</div>

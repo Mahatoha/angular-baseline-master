@@ -1,0 +1,20 @@
+{
+    "environment": "debug",
+    "version": "0.0.1",
+    "baseUrls": {
+        "gestionActeApi": "https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "authConfig": {
+        "oauthInterceptorRegex": "ws-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "issuer": "https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/auth/realms/xxxxxxxxx",
+        "clientId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-local",
+        "redirectUri": "origin",
+        "postLogoutRedirectUri": "origin",
+        "silentRefreshRedirectUri": "origin",
+        "responseType": "code",
+        "scope": "openid profile email offline_access",
+        "showDebugInformation": true,
+        "timeoutFactor": 0.75
+    },
+    "appTitle": "Gestion acte - Usagers"
+}

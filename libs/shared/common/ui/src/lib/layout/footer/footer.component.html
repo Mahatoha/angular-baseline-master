@@ -1,0 +1,5 @@
+@for (item of footerConfiguration(); track item.label) {
+    <button class="link-button" [style.color]="item.color" (click)="item.action()">
+        {{ item.label }}
+    </button>
+}

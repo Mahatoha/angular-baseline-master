@@ -1,0 +1,15 @@
+{
+    "name": "@gestion-acte/generators",
+    "version": "0.0.1",
+    "private": true,
+    "type": "commonjs",
+    "generators": "./generators.json",
+    "dependencies": {
+        "tslib": "^2.3.0",
+        "@nx/devkit": "21.6.2",
+        "@nx/angular": "21.6.2",
+        "rimraf": "^6.0.1",
+        "cross-spawn": "^7.0.6",
+        "rxjs": "~7.8.0"
+    }
+}

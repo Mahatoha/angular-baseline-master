@@ -1,0 +1,9 @@
+{
+    "baseUrls": {
+        "gestionActeApi": "https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "authConfig": {
+        "issuer": "https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/auth/realms/xxxxxxxxx",
+        "clientId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+}

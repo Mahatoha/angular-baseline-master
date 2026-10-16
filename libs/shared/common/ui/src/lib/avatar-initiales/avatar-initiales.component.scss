@@ -1,0 +1,50 @@
+:host {
+    position: relative;
+}
+
+.circle {
+    align-items: center;
+    background-color: var(--primary-color, blue);
+    border-radius: 50%;
+    border: 2px solid var(--primary-light-color);
+    box-shadow: 0 0 0 1.25px var(--gray-600);
+    color: white;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+
+    &--sm {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 0.85rem;
+    }
+
+    &--md {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    &--lg {
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+
+    &::before {
+        filter: blur(30px);
+    }
+}
+
+.parent-circle {
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+        z-index: 10;
+    }
+}
+
+.child-circle {
+    background-color: var(--cyan-600);
+    position: absolute;
+    top: 0;
+}

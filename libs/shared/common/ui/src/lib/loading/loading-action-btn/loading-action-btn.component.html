@@ -1,0 +1,5 @@
+@if (isActionRunning$ | async) {
+    <p-button [label]="loadingTextSnl()" [loading]="true" [class]="buttonClassSnl()" />
+} @else {
+    <ng-content />
+}

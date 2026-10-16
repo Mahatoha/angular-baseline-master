@@ -1,0 +1,9 @@
+{
+    "generators": {
+        "open-api-client": {
+            "implementation": "./src/open-api-client",
+            "schema": "./src/open-api-client/schema.json",
+            "description": "Generator open-api-client"
+        }
+    }
+}
