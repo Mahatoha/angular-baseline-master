@@ -28,7 +28,7 @@ describe("LoadingActionPanel", () => {
         // Arrange
         fixture.detectChanges();
         const projectedContentEl = fixture.debugElement.query(By.css(".projected-content"));
-        const loaderEl = fixture.debugElement.query(By.css("ga-loader"));
+        const loaderEl = fixture.debugElement.query(By.css("abm-loader"));
 
         // Assert
         expect(onChangeFn).toHaveBeenCalledWith(component.loadingAction, component.defaultEntityId);
@@ -43,7 +43,7 @@ describe("LoadingActionPanel", () => {
         // Act
         fixture.detectChanges();
         const projectedContentEl = fixture.debugElement.query(By.css(".projected-content"));
-        const loaderEl = fixture.debugElement.query(By.css("ga-loader"));
+        const loaderEl = fixture.debugElement.query(By.css("abm-loader"));
 
         // Assert
         expect(onChangeFn).toHaveBeenCalledWith(component.loadingAction, component.defaultEntityId);
@@ -62,7 +62,7 @@ describe("LoadingActionPanel", () => {
         tick(ACTION_DELAY);
 
         let projectedContentEl = fixture.debugElement.query(By.css(".projected-content"));
-        let loaderEl = fixture.debugElement.query(By.css("ga-loader"));
+        let loaderEl = fixture.debugElement.query(By.css("abm-loader"));
 
         expect(projectedContentEl).toBeNull();
         expect(loaderEl).not.toBeNull();
@@ -70,7 +70,7 @@ describe("LoadingActionPanel", () => {
         // Act
         fixture.detectChanges();
         projectedContentEl = fixture.debugElement.query(By.css(".projected-content"));
-        loaderEl = fixture.debugElement.query(By.css("ga-loader"));
+        loaderEl = fixture.debugElement.query(By.css("abm-loader"));
 
         // Assert
         expect(projectedContentEl).not.toBeNull();
@@ -94,7 +94,7 @@ describe("LoadingActionPanel", () => {
         // Arrange
         onChangeFn.mockImplementation(() => of(true));
         fixture.detectChanges();
-        const loaderEl = fixture.debugElement.query(By.css("ga-loader"));
+        const loaderEl = fixture.debugElement.query(By.css("abm-loader"));
         expect(loaderEl.componentInstance.sizeSnl()).toBe(component.loaderSize);
 
         // Act
@@ -108,7 +108,7 @@ describe("LoadingActionPanel", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<section
         gaLoadingActionPanel
         [action]="loadingAction"

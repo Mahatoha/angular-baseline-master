@@ -8,15 +8,14 @@ import { Tooltip } from "@openng/optimus-ui/tooltip";
 import { HintComponent } from "./hint.component";
 
 const DIRECTIVE_TEMPLATE: string = '<label class="test-label" [gaHint]="hintValue">{{ contentValue }}</label>';
-const COMPONENT_TEMPLATE: string =
-    '<ga-hint class="test-label" [gaHint]="hintValue">{{ contentValue }}</ga-hint>';
+const COMPONENT_TEMPLATE: string = '<abm-hint class="test-label" [gaHint]="hintValue">{{ contentValue }}</abm-hint>';
 
 const DIRECTIVE_TEMPLATE_WITH_REF: string = `
     <label class="test-label" [gaHint]="myRef">{{ contentValue }}</label>
     <ng-template #myRef><h1>{{templateRefValue}}</h1></ng-template>
 `;
 const COMPONENT_TEMPLATE_WITH_REF: string = `
-    <ga-hint class="test-label" [gaHint]="myRef">{{ contentValue }}</ga-hint>
+    <abm-hint class="test-label" [gaHint]="myRef">{{ contentValue }}</abm-hint>
     <ng-template #myRef><h1>{{templateRefValue}}</h1></ng-template>
 `;
 
@@ -105,7 +104,7 @@ describe("HintComponent", () => {
 });
 
 @Component({
-    selector: "ga-test-component",
+    selector: "abm-test-component",
     template: "",
     standalone: true,
     changeDetection: ChangeDetectionStrategy.Eager,

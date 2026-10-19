@@ -18,7 +18,7 @@ import { HoverScaleDirective, HoverShadowDirective } from "../transformations";
  */
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
-    selector: "div[ga-avatar-initiales]",
+    selector: "div[abm-avatar-initiales]",
     templateUrl: "./avatar-initiales.component.html",
     styleUrls: ["./avatar-initiales.component.scss"],
     imports: [AsyncPipe, OverlapCircleDirective, HoverScaleDirective, HoverShadowDirective, ToInitialesPipe],

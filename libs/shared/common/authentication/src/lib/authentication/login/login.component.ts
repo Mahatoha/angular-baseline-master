@@ -5,7 +5,7 @@ import { ERROR_LOGIN_ROUTE, LOGOUT_ROUTE } from "../../models";
 import { AuthenticationService } from "../_internal/authentication.service";
 
 @Component({
-    selector: "ga-login",
+    selector: "abm-login",
     templateUrl: "./login.component.html",
 })
 export class LoginComponent implements OnInit {

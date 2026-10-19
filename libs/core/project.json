@@ -1,5 +1,5 @@
 {
-    "name": "core-usagers",
+    "name": "core",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/core/usagers/src",
     "prefix": "apm",

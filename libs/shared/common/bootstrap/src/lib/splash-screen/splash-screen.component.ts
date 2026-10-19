@@ -1,7 +1,7 @@
 import { Component, input, InputSignal } from "@angular/core";
 
 @Component({
-    selector: "ga-splash-screen",
+    selector: "abm-splash-screen",
     templateUrl: "./splash-screen.component.html",
     styleUrls: ["./splash-screen.component.scss"],
 })

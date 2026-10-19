@@ -12,7 +12,7 @@ export const appRoutes: Routes = [
     {
         path: "",
         // canMatch: mapToCanMatch([AppHostGuard]),
-        loadChildren: () => import("@core/usagers").then((mt) => mt.coreRoutes),
+        loadChildren: () => import("@core").then((mt) => mt.coreRoutes),
     },
     {
         path: "**",

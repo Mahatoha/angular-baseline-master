@@ -5,7 +5,7 @@ import { HttpClient, HttpContext, HttpResponse } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { filter, map } from "rxjs/operators";
 import { StrictHttpResponse } from "../../strict-http-response";
-import { GestionActesRequestBuilder } from "../../gestion-actes-request-builder";
+import { GestionActesRequestBuilder } from "../../angular-baslie-master-request-builder";
 
 export interface ParamAppliCodeGet$Plain$Params {
     code: string;

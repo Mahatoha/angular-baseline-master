@@ -13,7 +13,7 @@ export const DEFAULT_MAX_LENGTH: number = 50;
  * est dépassée.
  */
 @Component({
-    selector: "ga-text-shortener",
+    selector: "abm-text-shortener",
     templateUrl: "./text-shortener.component.html",
     styleUrl: "./text-shortener.component.scss",
     imports: [EllipsisPipe, TooltipModule],

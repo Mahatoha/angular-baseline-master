@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpContext, HttpResponse } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { filter, map } from "rxjs/operators";
-import { GestionActesApiConfiguration } from "./gestion-actes-api-configuration";
+import { GestionActesApiConfiguration } from "./angular-baslie-master-api-configuration";
 import { StrictHttpResponse } from "./strict-http-response";
 
 export type ApiFnOptional<P, R> = (
@@ -26,7 +26,10 @@ export type ApiFnRequired<P, R> = (
  */
 @Injectable({ providedIn: "root" })
 export class GestionActesApi {
-    constructor(private config: GestionActesApiConfiguration, private http: HttpClient) {}
+    constructor(
+        private config: GestionActesApiConfiguration,
+        private http: HttpClient
+    ) {}
 
     private _rootUrl?: string;
 

@@ -7,7 +7,11 @@ import { Select, SelectModule } from "@openng/optimus-ui/select";
 import { MultiSelect, MultiSelectModule } from "@openng/optimus-ui/multiselect";
 import { SelectButton, SelectButtonModule } from "@openng/optimus-ui/selectbutton";
 
-import { REFERENTIAL_QUERY, ReferentialSelfPopulateDirective, Referentiels } from "./referential-self-populate.directive";
+import {
+    REFERENTIAL_QUERY,
+    ReferentialSelfPopulateDirective,
+    Referentiels,
+} from "./referential-self-populate.directive";
 import { BehaviorSubject, map, Observable } from "rxjs";
 
 interface Referentiel {
@@ -71,7 +75,6 @@ const fakeGetFilteredParentValue = (_pKey: string, parentCode: string, _refKey: 
     return STORE_DEFAULT_VALUE[FakeTypeCodeLibelle.Mock1Child]?.map((v) => v.code) ?? [];
 };
 
-
 @Service({ autoProvided: false })
 class ReferentialQueryMock {
     private readonly _storeSubject$ = new BehaviorSubject<Referentiels | null>(null);
@@ -85,14 +88,11 @@ class ReferentialQueryMock {
     }
 
     public selectActiveReferentialByType(referentialType: string): Observable<Array<Referentiel>> {
-        return this._storeSubject$.pipe(
-            map((referentials) => referentials?.[referentialType] ?? [])
-        );
+        return this._storeSubject$.pipe(map((referentials) => referentials?.[referentialType] ?? []));
     }
 
     public getFileredParentValue?:
-        | ((parentKey: string, referentialCode: string, referentialKey: string) => Array<string>)
-        | undefined;
+        ((parentKey: string, referentialCode: string, referentialKey: string) => Array<string>) | undefined;
 }
 
 describe("ReferentielSelfPopulateDirective", () => {
@@ -265,19 +265,16 @@ describe("ReferentielSelfPopulateDirective", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
-    template: ` <p-select #parent
-            class="p-dropdown"
-            gaSelfPopulate
-            [referentialKey]="TypeCodeLibelle.Mock1"
-         />
+    selector: "abm-test-host",
+    template: ` <p-select #parent class="p-dropdown" gaSelfPopulate [referentialKey]="TypeCodeLibelle.Mock1" />
         <p-multiSelect class="p-multiSelect" gaSelfPopulate [referentialKey]="TypeCodeLibelle.Mock2" />
-        <p-selectButton class="p-selectButton"
+        <p-selectButton
+            class="p-selectButton"
             gaSelfPopulate
             [referentialKey]="TypeCodeLibelle.Mock1Child"
             [referentialTypeParent]="TypeCodeLibelle.Mock1"
             [referentialCodeParent]="parent.value"
-         />`,
+        />`,
     changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ReferentialSelfPopulateDirective, SelectModule, MultiSelectModule, SelectButtonModule],
 })
@@ -286,7 +283,7 @@ class TestHostComponent {
 }
 
 @Component({
-    selector: "ga-should-throw",
+    selector: "abm-should-throw",
     template: `<p gaSelfPopulate></p>`,
     changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ReferentialSelfPopulateDirective],

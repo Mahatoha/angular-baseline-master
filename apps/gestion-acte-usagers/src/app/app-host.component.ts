@@ -11,7 +11,7 @@ import { Observable } from "rxjs";
     imports: [RouterModule, SplashScreenComponent, AsyncPipe],
 
     template: `@if (isLoadingData$ | async) {
-            <ga-splash-screen [appTitle]="appTitle" />
+            <abm-splash-screen [appTitle]="appTitle" />
         } @else {
             <router-outlet />
         } `,

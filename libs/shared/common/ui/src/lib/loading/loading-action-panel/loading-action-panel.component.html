@@ -1,6 +1,6 @@
 @if (isActionRunning$ | async) {
     <div class="loader-container" [class.fullscreen]="isFullScreenSnl()">
-        <ga-loader [size]="loaderSizeSnl()" />
+        <abm-loader [size]="loaderSizeSnl()" />
         @if (loadingTextSnl()) {
             <div
                 class="loading-text"

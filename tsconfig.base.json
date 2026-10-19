@@ -11,35 +11,77 @@
         "importHelpers": true,
         "target": "es2022",
         "module": "esnext",
-        "lib": ["ES2022", "dom"],
+        "lib": [
+            "ES2022",
+            "dom"
+        ],
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "strictNullChecks": true,
         "baseUrl": ".",
         "paths": {
-            "@core/usagers": ["libs/core/usagers/src/index.ts"],
-            "@gestion-acte/authentication": ["libs/shared/common/authentication/src/index.ts"],
-            "@gestion-acte/authorization": ["libs/shared/common/authorization/src/index.ts"],
-            "@gestion-acte/bootstrap": ["libs/shared/common/bootstrap/src/index.ts"],
-            "@gestion-acte/configuration": ["libs/shared/common/configuration/src/index.ts"],
-            "@gestion-acte/domain": ["libs/shared/common/domain/src/index.ts"],
-            "@gestion-acte/generators": ["tools/generators/src/index.ts"],
-            "@gestion-acte/rxjs-operators": ["libs/shared/common/rxjs-operators/src/index.ts"],
-            "@gestion-acte/theme": ["libs/shared/common/theme/src/index.ts"],
-            "@gestion-acte/ui": ["libs/shared/common/ui/src/index.ts"],
-            "@gestion-acte/utils": ["libs/shared/common/utils/src/index.ts"],
-            "@shared/apis/gestion-actes": ["libs/shared/apis/gestion-actes/src/index.ts"],
-            "@shared/usagers/configuration": ["libs/shared/usagers/configuration/src/index.ts"],
-            "@shared/usagers/domain": ["libs/shared/usagers/domain/src/index.ts"],
-            "@shared/usagers/services-agent": ["libs/shared/usagers/services-agent/src/index.ts"],
-            "@shared/usagers/ui": ["libs/shared/usagers/ui/src/index.ts"],
-            "@shared/usagers/utils": ["libs/shared/usagers/utils/src/index.ts"]
+            "@core/usagers": [
+                "libs/core/src/index.ts"
+            ],
+            "@gestion-acte/authentication": [
+                "libs/shared/common/authentication/src/index.ts"
+            ],
+            "@gestion-acte/authorization": [
+                "libs/shared/common/authorization/src/index.ts"
+            ],
+            "@gestion-acte/bootstrap": [
+                "libs/shared/common/bootstrap/src/index.ts"
+            ],
+            "@gestion-acte/configuration": [
+                "libs/shared/common/configuration/src/index.ts"
+            ],
+            "@gestion-acte/domain": [
+                "libs/shared/common/domain/src/index.ts"
+            ],
+            "@gestion-acte/generators": [
+                "tools/generators/src/index.ts"
+            ],
+            "@gestion-acte/rxjs-operators": [
+                "libs/shared/common/rxjs-operators/src/index.ts"
+            ],
+            "@gestion-acte/theme": [
+                "libs/shared/common/theme/src/index.ts"
+            ],
+            "@gestion-acte/ui": [
+                "libs/shared/common/ui/src/index.ts"
+            ],
+            "@gestion-acte/utils": [
+                "libs/shared/common/utils/src/index.ts"
+            ],
+            "@shared/apis/angular-baslie-master": [
+                "libs/shared/apis/angular-baslie-master/src/index.ts"
+            ],
+            "@shared/usagers/configuration": [
+                "libs/shared/usagers/configuration/src/index.ts"
+            ],
+            "@shared/usagers/domain": [
+                "libs/shared/usagers/domain/src/index.ts"
+            ],
+            "@shared/usagers/services-agent": [
+                "libs/shared/usagers/services-agent/src/index.ts"
+            ],
+            "@shared/usagers/ui": [
+                "libs/shared/usagers/ui/src/index.ts"
+            ],
+            "@shared/usagers/utils": [
+                "libs/shared/usagers/utils/src/index.ts"
+            ]
         },
         "strict": false,
         "noUncheckedSideEffectImports": false,
-        "types": ["*"],
+        "types": [
+            "*"
+        ],
         "esModuleInterop": false,
         "ignoreDeprecations": "6.0"
     },
-    "exclude": ["node_modules", "tmp"]
+    "exclude": [
+        "node_modules",
+        "tmp"
+    ]
 }

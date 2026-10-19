@@ -21,7 +21,7 @@ const DEFAULT_ROOT_ITEM: MenuItem = {
  */
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
-    selector: "nav[ga-breadcrumb]",
+    selector: "nav[abm-breadcrumb]",
     template: `<p-breadcrumb [model]="(breadcrumbItems$ | async) ?? []" [home]="rootItemSnl()" />`,
 
     imports: [AsyncPipe, BreadcrumbModule],

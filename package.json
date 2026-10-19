@@ -7,7 +7,7 @@
         "build": "npx nx build gestion-acte-usagers --prod",
         "test": "npx nx run-many --all --target=test",
         "lint": "npx nx run-many --all --target=lint --fix",
-        "api-gen-gestion-acte": "npx nx generate @gestion-acte/generators:open-api-client --apiName=gestion-actes --baseUrl=gestion-actes-api-local"
+        "api-gen-gestion-acte": "npx nx generate @gestion-acte/generators:open-api-client --apiName=angular-baslie-master --baseUrl=angular-baslie-master-api-local"
     },
     "private": true,
     "dependencies": {

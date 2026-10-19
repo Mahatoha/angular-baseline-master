@@ -288,7 +288,7 @@ describe("SidebarComponent", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<nav gaSidebar [menuItems]="menu"></nav>`,
     standalone: true,
     changeDetection: ChangeDetectionStrategy.Eager,

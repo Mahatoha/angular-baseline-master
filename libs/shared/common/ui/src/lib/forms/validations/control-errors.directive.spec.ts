@@ -40,7 +40,7 @@ describe("ControlErrorsDirective", () => {
         // Act
         fixture.detectChanges();
         tick();
-        const errorComponentEl: DebugElement = fixture.debugElement.query(By.css("ga-error-message"));
+        const errorComponentEl: DebugElement = fixture.debugElement.query(By.css("abm-error-message"));
 
         // Assert
         expect(errorComponentEl).toBeNull();
@@ -104,7 +104,7 @@ describe("ControlErrorsDirective", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<div class="parent-container">
         <input [formControl]="testControl" [customErrMessages]="customMessages" />
     </div>`,

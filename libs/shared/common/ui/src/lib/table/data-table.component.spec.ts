@@ -13,7 +13,7 @@ describe("GestionActeDataTable", () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [ConcreteDataTableComponent]
+            imports: [ConcreteDataTableComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(ConcreteDataTableComponent);
         concreteDataTable = fixture.componentInstance;
@@ -88,9 +88,9 @@ describe("GestionActeDataTable", () => {
 });
 
 @Component({
-    selector: "ga-concrete-data-table",
+    selector: "abm-concrete-data-table",
     template: `<p-table />`,
     changeDetection: ChangeDetectionStrategy.Eager,
-    imports: [TableModule]
+    imports: [TableModule],
 })
 class ConcreteDataTableComponent extends GestionActeDataTable<{ id: number }> {}

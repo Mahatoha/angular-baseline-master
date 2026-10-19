@@ -2,7 +2,7 @@
     "name": "shared-common-authorization",
     "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/shared/common/authorization/src",
-    "prefix": "ga",
+    "prefix": "abm",
     "projectType": "library",
     "tags": ["scope:common", "scope:shared", "type:domain"],
     "targets": {

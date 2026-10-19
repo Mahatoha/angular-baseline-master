@@ -37,8 +37,8 @@ describe("LoaderComponent", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
-    template: `<ga-loader [size]="loaderSize" />`,
+    selector: "abm-test-host",
+    template: `<abm-loader [size]="loaderSize" />`,
     changeDetection: ChangeDetectionStrategy.Eager,
     imports: [LoaderComponent],
 })

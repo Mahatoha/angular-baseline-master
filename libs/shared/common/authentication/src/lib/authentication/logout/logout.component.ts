@@ -4,7 +4,7 @@ import { RouterLink } from "@angular/router";
 import { AuthenticationService } from "../_internal/authentication.service";
 
 @Component({
-    selector: "ga-logout",
+    selector: "abm-logout",
     templateUrl: "./logout.component.html",
     styleUrls: ["./logout.component.scss"],
     imports: [RouterLink],

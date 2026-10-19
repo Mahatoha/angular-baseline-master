@@ -70,7 +70,7 @@ describe("HoverScaleDirective", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<div gaHoverScale class="no-ratio"></div>
         <div class="dynamic-ratio" gaHoverScale [scalingRatio]="dynamicScaling"></div>`,
     standalone: true,

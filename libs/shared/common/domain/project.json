@@ -2,7 +2,7 @@
     "name": "shared-common-domain",
     "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/shared/common/domain/src",
-    "prefix": "ga",
+    "prefix": "abm",
     "projectType": "library",
     "tags": ["scope:common", "scope:shared", "type:domain"],
     "targets": {

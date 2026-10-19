@@ -19,7 +19,7 @@ export default [
                 "error",
                 {
                     type: "attribute",
-                    prefix: "ga",
+                    prefix: "abm",
                     style: "camelCase",
                 },
             ],
@@ -27,7 +27,7 @@ export default [
                 "error",
                 {
                     type: "element",
-                    prefix: "ga",
+                    prefix: "abm",
                     style: "kebab-case",
                 },
             ],

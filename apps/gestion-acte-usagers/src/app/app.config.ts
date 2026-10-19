@@ -17,7 +17,7 @@ import { AUTH_MODULE_CONFIG, provideAuthentication } from "@gestion-acte/authent
 import { provideAuthorization, USER_DATA } from "@gestion-acte/authorization";
 import { ENVIRONMENT } from "@gestion-acte/configuration";
 import { provideOptimus } from "@openng/optimus-ui/config";
-import { GestionActesApiConfiguration, GestionActesApiConfigurationParams } from "@shared/apis/gestion-actes";
+import { GestionActesApiConfiguration, GestionActesApiConfigurationParams } from "@shared/apis/angular-baslie-master";
 import { APP_CONFIG, AppConfig } from "@shared/usagers/configuration";
 import { of } from "rxjs";
 

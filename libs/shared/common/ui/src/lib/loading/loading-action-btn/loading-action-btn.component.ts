@@ -12,7 +12,7 @@ import { ACTION_NOTIFIER, ActionNotifier } from "../../models/action-notifier.mo
  * lorsque une action donnée est en cours d'exécution.
  */
 @Component({
-    selector: "ga-loading-action-btn, [gaLoadingActionBtn]",
+    selector: "abm-loading-action-btn, [gaLoadingActionBtn]",
     templateUrl: "./loading-action-btn.component.html",
     imports: [AsyncPipe, ButtonModule, SplitButtonModule],
 })

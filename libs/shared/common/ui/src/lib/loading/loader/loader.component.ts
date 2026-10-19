@@ -3,7 +3,7 @@ import { Component, input, InputSignal } from "@angular/core";
 import { AvailableSize } from "../../models/size.model";
 
 @Component({
-    selector: "ga-loader",
+    selector: "abm-loader",
     template: `<div
         class="la-square-jelly-box"
         [class.loading-text--sm]="sizeSnl() === 'sm'"

@@ -4,7 +4,7 @@ import { NgControl } from "@angular/forms";
 import { ErrMessages } from "../control-errors.model";
 
 @Component({
-    selector: "ga-error-message",
+    selector: "abm-error-message",
     templateUrl: "./error-message.component.html",
     styleUrls: ["./error-message.component.scss"],
     encapsulation: ViewEncapsulation.None,

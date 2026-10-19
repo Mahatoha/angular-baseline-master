@@ -2,7 +2,7 @@
     "name": "shared-common-bootstrap",
     "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/shared/common/bootstrap/src",
-    "prefix": "ga",
+    "prefix": "abm",
     "projectType": "library",
     "tags": ["scope:common", "scope:shared", "type:ui"],
     "targets": {

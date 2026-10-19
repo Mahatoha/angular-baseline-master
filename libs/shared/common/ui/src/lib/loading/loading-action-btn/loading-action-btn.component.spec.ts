@@ -102,7 +102,7 @@ describe("LoadingActionBtn", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<div
         gaLoadingActionBtn
         [loadingAction]="loadingAction"

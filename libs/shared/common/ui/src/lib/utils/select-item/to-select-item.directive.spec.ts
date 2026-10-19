@@ -78,7 +78,7 @@ describe("ToSelectItemsDirective", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `
         <p-select gaToSelectItems [options]="optionsValue" labelProperty="a" />
         <p-multiSelect gaToSelectItems [options]="optionsValue" labelProperty="a" />
@@ -116,7 +116,7 @@ export class TestHostComponent {
 }
 
 @Component({
-    selector: "ga-test-host-span",
+    selector: "abm-test-host-span",
     template: ` <span gaToSelectItems class="test-span">test</span> `,
     standalone: true,
     changeDetection: ChangeDetectionStrategy.Eager,

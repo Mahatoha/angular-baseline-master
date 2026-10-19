@@ -138,13 +138,10 @@ describe("TextShortenerComponent", () => {
 });
 
 @Component({
-    selector: "ga-test-component",
+    selector: "abm-test-component",
     template: `
-        <ga-text-shortener id="label-only" [label]="labelValue" />
-        <ga-text-shortener id="label-and-max-length"
-            [label]="labelValue"
-            [maxLength]="maxLengthValue"
-         />
+        <abm-text-shortener id="label-only" [label]="labelValue" />
+        <abm-text-shortener id="label-and-max-length" [label]="labelValue" [maxLength]="maxLengthValue" />
     `,
     standalone: true,
     changeDetection: ChangeDetectionStrategy.Eager,

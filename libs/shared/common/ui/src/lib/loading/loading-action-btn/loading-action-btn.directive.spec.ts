@@ -69,7 +69,7 @@ describe("LoadingActionBtnDirective", () => {
 });
 
 @Component({
-    selector: "ga-should-throw",
+    selector: "abm-should-throw",
     template: `<button gaLoadingBtn></button>`,
     standalone: true,
     changeDetection: ChangeDetectionStrategy.Eager,
@@ -78,7 +78,7 @@ describe("LoadingActionBtnDirective", () => {
 export class DirectiveShouldThrowComponent {}
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<button pButton gaLoadingBtn [loadingAction]="action1" [entityId]="defaultEntityId"></button>
         <p-button class="pButton" gaLoadingBtn [loadingAction]="action2" [entityId]="defaultEntityId" />`,
     standalone: true,

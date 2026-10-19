@@ -70,7 +70,7 @@ describe("HoverShadowDirective", () => {
 });
 
 @Component({
-    selector: "ga-test-host",
+    selector: "abm-test-host",
     template: `<div gaHoverShadow class="base-shadow"></div>
         <div class="custom-shadow" gaHoverShadow [shadow]="customHoverShadow"></div>`,
     standalone: true,
